@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import MovieList from '../components/MovieList/MovieList';
+import css from './HomePage.module.css';
 
 const API_KEY = '3d038329c18432526df90308185ea4bc';
 const ACCESS_TOKEN = 'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIzZDAzODMyOWMxODQzMjUyNmRmOTAzMDgxODVlYTRiYyIsIm5iZiI6MTcyMzk5NTY0Ni43NDY0OTQsInN1YiI6IjY2YzIxMGRlMThlNjYyMmFkY2QzNDVlYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.nCZe9VjKyub-4CEK_TECHdsfUCTV9J81gkkxCY-RarA';
@@ -30,7 +31,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div>
+    <div className={css.homePage}>
       <h2>Trending today</h2>
       <MovieList movies={movies} />
     </div>
